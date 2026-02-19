@@ -1,85 +1,261 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kaju Padaria &amp; Bistrô</title>
+  <meta name="description"
+    content="Kaju Padaria & Bistrô em Sertãozinho: pães de longa fermentação, cozinha artesanal, cafeteria e pratos feitos com ingredientes naturais." />
+  <title>Kaju Padaria & Bistrô | Artesanal em Sertãozinho</title>
 
-  <!-- CSS principal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonte opcional (pode remover se quiser 100% nativo) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-content">
-      <a href="index.html" class="logo">
-        <!-- Depois podemos trocar por uma imagem -->
-        Kaju Padaria &amp; Bistrô
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Kaju Padaria e Bistrô">
+        <span class="brand__name">Kaju</span>
+        <span class="brand__tag">Padaria &amp; Bistrô</span>
       </a>
 
-      <nav class="site-nav">
-        <a href="index.html">Home</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="sr-only">Abrir menu</span>
+      </button>
+
+      <nav class="nav" id="menu" aria-label="Menu principal">
         <a href="sobre.html">Sobre</a>
-        <a href="carros-chefe.html">Carros-chefe</a>
+        <a href="produtos.html">Carros-chefe</a>
         <a href="experiencia.html">Experiência</a>
         <a href="contato.html">Contato</a>
-      </nav>
 
-      <a class="btn-primary" href="#" target="_blank" rel="noopener noreferrer">
-        Ver cardápio completo
-      </a>
+        <!-- LINK DO CARDÁPIO (trocar depois pelo link real) -->
+        <a class="btn btn--primary nav__cta" href="#" target="_blank" rel="noopener noreferrer">
+          Ver cardápio completo
+        </a>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <main id="conteudo">
     <!-- Hero -->
     <section class="hero">
-      <div class="container hero-content">
-        <h1>Padaria e Bistrô de fermentação natural em Sertãozinho</h1>
-        <p>
-          Pães de longa fermentação, pratos artesanais, doces e cafeteria —
-          tudo feito com ingredientes naturais, sem atalhos e sem industrializados.
-        </p>
-        <div class="hero-actions">
-          <a class="btn-primary" href="#" target="_blank" rel="noopener noreferrer">
-            Ver cardápio completo
-          </a>
-          <a class="btn-secondary" href="carros-chefe.html">
-            Conhecer carros-chefe
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">Tudo feito por nós para você!</p>
+
+          <h1 class="hero__title">
+            Padaria artesanal, cafeteria e bistrô em Sertãozinho.
+          </h1>
+
+          <p class="hero__text">
+            A Kaju nasceu para oferecer uma experiência genuinamente artesanal: pães, doces, pratos e cafés
+            feitos sem industrializados, sem atalhos e com muito cuidado em cada detalhe.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#" target="_blank" rel="noopener noreferrer">
+              Ver cardápio completo
+            </a>
+            <a class="btn btn--ghost" href="produtos.html">
+              Chamar no WhatsApp
+            </a>
+          </div>
+
+          <ul class="hero__highlights" aria-label="Diferenciais">
+            <li>Longa fermentação desde 2018</li>
+            <li>Farinha pura, sem aditivos</li>
+            <li>Produção feita na casa</li>
+          </ul>
+        </div>
+
+        <div class="hero__media" aria-hidden="true">
+          <!-- Depois trocamos por imagem real em assets/images -->
+          <div class="hero__img-placeholder">
+            <span>Imagem destaque (pães / vitrine / ambiente)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre preview -->
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <h2 class="section__title">Sobre a Kaju</h2>
+          <p class="section__text">
+            A Kaju nasceu pequena, de um sonho simples: fazer comida boa, de verdade.
+            Começamos com pães de fermentação natural e evoluímos para um bistrô artesanal —
+            com massas frescas, pizzas, doces e lanches, sempre com a mesma filosofia.
+          </p>
+          <p class="section__text">
+            Aqui, cada detalhe é pensado para traduzir o que acreditamos:
+            comida é amor em forma de partilha.
+          </p>
+
+          <a class="link" href="sobre.html">Saiba mais sobre nossa história →</a>
+        </div>
+
+        <div class="card card--soft">
+          <h3 class="card__title">Nossa essência</h3>
+          <ul class="list">
+            <li>Sem industrializados, conservantes ou aditivos artificiais</li>
+            <li>Parceiros alinhados com a proposta da casa</li>
+            <li>Opções com baixa gordura e baixo açúcar (sem “cortar” sabor)</li>
+            <li>Charcutaria no lugar de embutidos industrializados</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carros-chefe preview -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Carros-chefe</h2>
+          <p class="section__subtitle">
+            Uma amostra do que fazemos com mais carinho. Para ver tudo, acesse o cardápio completo.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="product">
+            <div class="product__img">Foto</div>
+            <h3 class="product__title">Pão italiano (longa fermentação)</h3>
+            <p class="product__text">Farinha pura, tempo e técnica para uma massa leve e cheia de sabor.</p>
+          </article>
+
+          <article class="product">
+            <div class="product__img">Foto</div>
+            <h3 class="product__title">Croissant artesanal</h3>
+            <p class="product__text">Folhas bem definidas, manteiga e processo feito na casa.</p>
+          </article>
+
+          <article class="product">
+            <div class="product__img">Foto</div>
+            <h3 class="product__title">Focaccia &amp; pizzas</h3>
+            <p class="product__text">Massa de longa fermentação e ingredientes selecionados.</p>
+          </article>
+
+          <article class="product">
+            <div class="product__img">Foto</div>
+            <h3 class="product__title">Nhoque de mandioquinha</h3>
+            <p class="product__text">Conforto e delicadeza com preparo artesanal.</p>
+          </article>
+
+          <article class="product">
+            <div class="product__img">Foto</div>
+            <h3 class="product__title">Parmegiana</h3>
+            <p class="product__text">Clássico da casa com cuidado no ponto e no sabor.</p>
+          </article>
+
+          <article class="product">
+            <div class="product__img">Foto</div>
+            <h3 class="product__title">Cafeteria</h3>
+            <p class="product__text">Ovo cremoso, iogobowl, dalgona e opções para desacelerar.</p>
+          </article>
+        </div>
+
+        <div class="cta-banner">
+          <div>
+            <h3 class="cta-banner__title">Quer ver o cardápio completo?</h3>
+            <p class="cta-banner__text">Acesse o menu online com todas as opções.</p>
+          </div>
+          <a class="btn btn--primary" href="#" target="_blank" rel="noopener noreferrer">
+            Acessar cardápio
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Seção resumo Sobre -->
-    <section class="section about-preview">
-      <div class="container">
-        <h2>Sobre a Kaju</h2>
-        <p>
-          A Kaju nasceu do sonho de fazer comida boa, de verdade. Começamos com os
-          pães de fermentação natural e hoje somos um bistrô artesanal, onde tudo é
-          feito por nós, com cuidado em cada detalhe.
-        </p>
-        <a class="link-more" href="sobre.html">Saiba mais sobre nossa história</a>
+    <!-- Experiência preview -->
+    <section class="section">
+      <div class="container two-col">
+        <div class="card card--image">
+          <div class="img-placeholder">Foto do ambiente</div>
+        </div>
+
+        <div>
+          <h2 class="section__title">A experiência Kaju</h2>
+          <p class="section__text">
+            Aqui o tempo desacelera, os sabores ganham alma e o atendimento é acolhedor.
+            Um espaço para comer bem, conversar e aproveitar o feito à mão.
+          </p>
+          <a class="link" href="experiencia.html">Ver fotos do ambiente →</a>
+        </div>
       </div>
     </section>
 
-    <!-- Placeholder para mais seções depois -->
-    <section class="section placeholder">
-      <div class="container">
-        <h2>Em desenvolvimento</h2>
-        <p>Em breve, esta página terá os destaques de produtos e do ambiente Kaju. 🍞</p>
+    <!-- Contato rápido -->
+    <section class="section section--alt">
+      <div class="container contact">
+        <div>
+          <h2 class="section__title">Fale com nossa equipe pelo WhatsApp</h2>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="https://wa.me/5516991916355" target="_blank" rel="noopener noreferrer">
+              Falar no WhatsApp
+            </a>
+
+          </div>
+
+          <div class="contact__info">
+            <p><strong>Telefone:</strong> (16) 3948-0558</p>
+            <p><strong>WhatsApp:</strong> (16) 99191-6355</p>
+            <p><strong>Instagram:</strong> @kajupaesedoces</p>
+          </div>
+        </div>
+
+        <div class="card card--soft">
+          <h3 class="card__title">Fique por dentro das novidades</h3>
+          <p class="section__text">
+            Acompanhe o Instagram para ver o cardápio do dia, novidades e eventos.
+          </p>
+          <!-- Trocar pelo link real do Instagram -->
+          <a class="btn btn--primary" href="https://www.instagram.com/kajupaesedoces/" target="_blank"
+            rel="noopener noreferrer">
+            Ir para o Instagram
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; Kaju Padaria &amp; Bistrô • Sertãozinho - SP</p>
-      <p>Avenida Antonio Paschoal, 1417 • Tel: (16) 3948-0558 • WhatsApp: (16) 99191-6355</p>
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <p class="footer__brand"><strong>Kaju</strong> Padaria &amp; Bistrô</p>
+        <p class="footer__text">Tudo feito por nós para você.</p>
+      </div>
+
+      <div class="footer__links">
+        <a href="sobre.html">Sobre</a>
+        <a href="produtos.html">Carros-chefe</a>
+        <a href="experiencia.html">Experiência</a>
+        <a href="contato.html">Contato</a>
+      </div>
+
+      <div class="footer__meta">
+        <p>Avenida Antonio Paschoal, 1417 — Sertãozinho/SP</p>
+        <p>Tel: (16) 3948-0558 • WhatsApp: (16) 99191-6355</p>
+      </div>
     </div>
   </footer>
 
-  <!-- JS principal -->
   <script src="js/main.js"></script>
 </body>
+
 </html>
